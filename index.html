@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Luminous Robots Coordination in More Adversarial Environments</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- ── Reveal.js loaded from CDN – no binary files required ── -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css" id="theme">
+
+  <!-- ── Custom theme (colors, layout, typography) ── -->
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+<div class="reveal">
+<div class="slides" id="slides-container">
+  <!-- Slides are loaded dynamically from slides/ — see the script below -->
+</div>
+</div>
+
+<!-- ── Reveal.js core ── -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  /*
+   * ─────────────────────────────────────────────────────────
+   *  SLIDE ORDER
+   *  Add, remove, or reorder slide filenames here.
+   *  Each string maps to slides/<name>.html
+   * ─────────────────────────────────────────────────────────
+   */
+  const SLIDES = [
+    "01_title",
+    "02_definition",
+    "03_look-compute-move",
+    "04_characteristics",
+    "05_advantages",
+    "06_environment",
+    "07_exploration",
+    "08_gathering",
+    "09_algorithm-def",
+    "10_algorithm-examples",
+    "11_obj-3d",
+    "12_obj-obstacles",
+    "13_obj-dynamic",
+    "14_why-research",
+  ];
+
+  /*
+   * ─────────────────────────────────────────────────────────
+   *  LOADER — fetch each slide file and inject into the DOM,
+   *  then initialize Reveal.js once all slides are ready.
+   * ─────────────────────────────────────────────────────────
+   */
+  const container = document.getElementById("slides-container");
+
+  // Keep only the slide index badge inside the white slide frame (bottom-right).
+  function placeSlideNumberInsideFrame() {
+    const slidesFrame = document.querySelector(".reveal .slides");
+    const numberBadge = document.querySelector(".reveal .slide-number");
+    if (!slidesFrame || !numberBadge) return;
+
+    const frameRect = slidesFrame.getBoundingClientRect();
+    const insetX = 14;
+    const insetY = 12;
+
+    numberBadge.style.right = "auto";
+    numberBadge.style.bottom = "auto";
+
+    const badgeLeft = frameRect.right - numberBadge.offsetWidth - insetX;
+    const badgeTop = frameRect.bottom - numberBadge.offsetHeight - insetY;
+
+    numberBadge.style.left = `${Math.max(8, badgeLeft)}px`;
+    numberBadge.style.top = `${Math.max(8, badgeTop)}px`;
+  }
+
+  Promise.all(
+    SLIDES.map(name =>
+      fetch(`slides/${name}.html`)
+        .then(r => {
+          if (!r.ok) throw new Error(`Could not load slides/${name}.html (${r.status})`);
+          return r.text();
+        })
+    )
+  ).then(htmlChunks => {
+    htmlChunks.forEach(html => {
+      const tmp = document.createElement("div");
+      tmp.innerHTML = html;
+      // append each <section> node individually
+      Array.from(tmp.children).forEach(node => container.appendChild(node));
+    });
+
+    Reveal.initialize({
+      hash:                 true,
+      slideNumber:          'c/t',
+      transition:           'convex',
+      transitionSpeed:      'default',
+      backgroundTransition: 'fade',
+      autoAnimate:          true,
+      autoAnimateEasing:    'ease-out',
+      controls:             false,
+      progress:             true,
+      center:               false,
+      fragmentInURL:        true,
+      width:                1050,
+      height:               680,
+      margin:               0.04,
+      minScale:             0.2,
+      maxScale:             2.0,
+    });
+
+    // Run after Reveal creates the slide number element.
+    requestAnimationFrame(placeSlideNumberInsideFrame);
+    Reveal.on("ready", placeSlideNumberInsideFrame);
+    Reveal.on("slidechanged", placeSlideNumberInsideFrame);
+    Reveal.on("resize", placeSlideNumberInsideFrame);
+    window.addEventListener("resize", placeSlideNumberInsideFrame);
+  }).catch(err => {
+    console.error("Slide loading failed:", err);
+    container.innerHTML = `<section><p style="color:red">⚠ ${err.message}<br>
+      Open via a local server (e.g. <code>npx serve .</code>), not directly from the filesystem.</p></section>`;
+    Reveal.initialize({ hash: true });
+  });
+</script>
+
+</body>
+</html>

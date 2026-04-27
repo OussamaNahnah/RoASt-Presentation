@@ -1,0 +1,96 @@
+<section data-slide-id="look-compute-move">
+  <div class="slide-header">
+    <div class="slide-title">1 – Luminous Robots</div>
+    <div class="slide-subtitle">B) Look-Compute-Move Cycle</div>
+  </div>
+  <div class="slide-body">
+    <div class="three-col" style="margin-top:18px; gap:0;">
+
+      <!-- LOOK -->
+      <div class="col-item fig">
+        <!-- ── SVG: Eye ──────────────────────────────────────── -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="150" aria-label="Look phase – eye icon">
+          <ellipse cx="50" cy="50" rx="43" ry="27" fill="none" stroke="#006D82" stroke-width="4"/>
+          <circle  cx="50" cy="50" r="19" fill="#006D82"/>
+          <circle  cx="50" cy="50" r="9"  fill="white"/>
+          <circle  cx="54" cy="46" r="3"  fill="#006D82"/>
+          <line x1="28" y1="31" x2="31" y2="37" stroke="#006D82" stroke-width="2"/>
+          <line x1="50" y1="22" x2="50" y2="29" stroke="#006D82" stroke-width="2"/>
+          <line x1="72" y1="31" x2="69" y2="37" stroke="#006D82" stroke-width="2"/>
+        </svg>
+        <div class="phase-label">Look</div>
+      </div>
+
+      <!-- Arrow -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 20" width="60" style="flex:0 0 60px; align-self:center;">
+        <line x1="0" y1="10" x2="36" y2="10" stroke="#8C979A" stroke-width="3"/>
+        <polygon points="36,5 48,10 36,15" fill="#8C979A"/>
+      </svg>
+
+      <!-- COMPUTE -->
+      <div class="col-item fig">
+        <!-- ── SVG: CPU chip ─────────────────────────────────── -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="150" aria-label="Compute phase – CPU icon">
+          <rect x="25" y="25" width="50" height="50" rx="5" fill="#006D82"/>
+          <rect x="35" y="35" width="30" height="30" rx="3" fill="#004a5c"/>
+          <!-- Pins top -->
+          <rect x="35" y="17" width="5" height="8" fill="#8C979A"/>
+          <rect x="46" y="17" width="5" height="8" fill="#8C979A"/>
+          <rect x="58" y="17" width="5" height="8" fill="#8C979A"/>
+          <!-- Pins bottom -->
+          <rect x="35" y="75" width="5" height="8" fill="#8C979A"/>
+          <rect x="46" y="75" width="5" height="8" fill="#8C979A"/>
+          <rect x="58" y="75" width="5" height="8" fill="#8C979A"/>
+          <!-- Pins left -->
+          <rect x="17" y="35" width="8" height="5" fill="#8C979A"/>
+          <rect x="17" y="46" width="8" height="5" fill="#8C979A"/>
+          <rect x="17" y="57" width="8" height="5" fill="#8C979A"/>
+          <!-- Pins right -->
+          <rect x="75" y="35" width="8" height="5" fill="#8C979A"/>
+          <rect x="75" y="46" width="8" height="5" fill="#8C979A"/>
+          <rect x="75" y="57" width="8" height="5" fill="#8C979A"/>
+          <!-- Inner lines -->
+          <line x1="39" y1="44" x2="61" y2="44" stroke="#00ccff" stroke-width="1.5"/>
+          <line x1="39" y1="50" x2="61" y2="50" stroke="#00ccff" stroke-width="1.5"/>
+          <line x1="39" y1="56" x2="61" y2="56" stroke="#00ccff" stroke-width="1.5"/>
+        </svg>
+        <div class="phase-label">Compute</div>
+      </div>
+
+      <!-- Arrow -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 20" width="60" style="flex:0 0 60px; align-self:center;">
+        <line x1="0" y1="10" x2="36" y2="10" stroke="#8C979A" stroke-width="3"/>
+        <polygon points="36,5 48,10 36,15" fill="#8C979A"/>
+      </svg>
+
+      <!-- MOVE -->
+      <div class="col-item fig">
+        <!-- ── SVG: Robot with motion arrows ─────────────────── -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 100" width="150" aria-label="Move phase – robot in motion">
+          <!-- Motion trail lines -->
+          <line x1="2" y1="42" x2="20" y2="42" stroke="#FFD700" stroke-width="2" stroke-dasharray="4,3" opacity="0.7"/>
+          <line x1="2" y1="54" x2="20" y2="54" stroke="#FFD700" stroke-width="2" stroke-dasharray="4,3" opacity="0.7"/>
+          <line x1="2" y1="66" x2="20" y2="66" stroke="#FFD700" stroke-width="2" stroke-dasharray="4,3" opacity="0.7"/>
+          <!-- Body -->
+          <rect x="22" y="30" width="52" height="44" rx="6" fill="#006D82"/>
+          <!-- Head -->
+          <rect x="29" y="14" width="38" height="22" rx="6" fill="#006D82"/>
+          <!-- Eyes (lights) -->
+          <circle cx="40" cy="25" r="5" fill="#00ff88"/>
+          <circle cx="58" cy="25" r="5" fill="#ff3366"/>
+          <!-- Wheels -->
+          <ellipse cx="36" cy="76" rx="10" ry="7" fill="#555"/>
+          <ellipse cx="62" cy="76" rx="10" ry="7" fill="#555"/>
+          <!-- Forward arrow -->
+          <line x1="76" y1="48" x2="92" y2="48" stroke="#FFD700" stroke-width="3"/>
+          <polygon points="90,43 100,48 90,53" fill="#FFD700"/>
+        </svg>
+        <div class="phase-label">Move</div>
+      </div>
+
+    </div>
+    <p style="text-align:center; color:#8C979A; font-size:0.65em; margin-top:14px;">
+      ↺ &nbsp; Cycle repeats — robots operate asynchronously
+    </p>
+  </div>
+</section>

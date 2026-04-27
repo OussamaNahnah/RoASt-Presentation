@@ -1,0 +1,88 @@
+<section data-slide-id="exploration">
+  <div class="slide-header">
+    <div class="slide-title">2 – Problems</div>
+    <div class="slide-subtitle">A) Exploration</div>
+  </div>
+  <div class="slide-body">
+    <p><strong>Definition:</strong> visiting each location in a discrete environment.</p>
+    <div class="fig" style="margin-top:10px;">
+      <div class="r-stack">
+
+        <!-- ── State 1: robot at top-left corner ─────────────── -->
+        <svg class="fragment fade-out" data-fragment-index="0"
+             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226 226" width="320"
+             aria-label="Exploration step 1 – robot starts at top-left">
+          <!-- Grid edges (4×4, step=66, offset=20) -->
+          <line x1="20"  y1="20"  x2="218" y2="20"  stroke="#ccc" stroke-width="2"/>
+          <line x1="20"  y1="86"  x2="218" y2="86"  stroke="#ccc" stroke-width="2"/>
+          <line x1="20"  y1="152" x2="218" y2="152" stroke="#ccc" stroke-width="2"/>
+          <line x1="20"  y1="218" x2="218" y2="218" stroke="#ccc" stroke-width="2"/>
+          <line x1="20"  y1="20"  x2="20"  y2="218" stroke="#ccc" stroke-width="2"/>
+          <line x1="86"  y1="20"  x2="86"  y2="218" stroke="#ccc" stroke-width="2"/>
+          <line x1="152" y1="20"  x2="152" y2="218" stroke="#ccc" stroke-width="2"/>
+          <line x1="218" y1="20"  x2="218" y2="218" stroke="#ccc" stroke-width="2"/>
+          <!-- Unvisited nodes (gray) -->
+          <circle cx="86"  cy="20"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="152" cy="20"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="218" cy="20"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="20"  cy="86"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="86"  cy="86"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="152" cy="86"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="218" cy="86"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="20"  cy="152" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="86"  cy="152" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="152" cy="152" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="218" cy="152" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="20"  cy="218" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="86"  cy="218" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="152" cy="218" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="218" cy="218" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <!-- Robot at (0,0) = (20,20) -->
+          <circle cx="20" cy="20" r="14" fill="#FFD700" stroke="#cc8800" stroke-width="2"/>
+          <text x="20" y="24" text-anchor="middle" font-size="10" fill="#333" font-weight="bold">R</text>
+        </svg>
+
+        <!-- ── State 2: robot has traversed part of the grid ── -->
+        <svg class="fragment" data-fragment-index="0"
+             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226 226" width="320"
+             aria-label="Exploration step 2 – robot has visited several nodes">
+          <!-- Grid edges -->
+          <line x1="20"  y1="20"  x2="218" y2="20"  stroke="#ccc" stroke-width="2"/>
+          <line x1="20"  y1="86"  x2="218" y2="86"  stroke="#ccc" stroke-width="2"/>
+          <line x1="20"  y1="152" x2="218" y2="152" stroke="#ccc" stroke-width="2"/>
+          <line x1="20"  y1="218" x2="218" y2="218" stroke="#ccc" stroke-width="2"/>
+          <line x1="20"  y1="20"  x2="20"  y2="218" stroke="#ccc" stroke-width="2"/>
+          <line x1="86"  y1="20"  x2="86"  y2="218" stroke="#ccc" stroke-width="2"/>
+          <line x1="152" y1="20"  x2="152" y2="218" stroke="#ccc" stroke-width="2"/>
+          <line x1="218" y1="20"  x2="218" y2="218" stroke="#ccc" stroke-width="2"/>
+          <!-- Visited path highlight -->
+          <line x1="20"  y1="20"  x2="218" y2="20"  stroke="#006D82" stroke-width="5" opacity="0.4"/>
+          <line x1="218" y1="20"  x2="218" y2="152" stroke="#006D82" stroke-width="5" opacity="0.4"/>
+          <line x1="218" y1="152" x2="152" y2="152" stroke="#006D82" stroke-width="5" opacity="0.4"/>
+          <!-- Visited nodes (teal) -->
+          <circle cx="20"  cy="20"  r="11" fill="#006D82" opacity="0.7"/>
+          <circle cx="86"  cy="20"  r="11" fill="#006D82" opacity="0.7"/>
+          <circle cx="152" cy="20"  r="11" fill="#006D82" opacity="0.7"/>
+          <circle cx="218" cy="20"  r="11" fill="#006D82" opacity="0.7"/>
+          <circle cx="218" cy="86"  r="11" fill="#006D82" opacity="0.7"/>
+          <circle cx="218" cy="152" r="11" fill="#006D82" opacity="0.7"/>
+          <!-- Unvisited nodes (gray) -->
+          <circle cx="86"  cy="86"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="152" cy="86"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="20"  cy="86"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="20"  cy="152" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="86"  cy="152" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="20"  cy="218" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="86"  cy="218" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="152" cy="218" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="218" cy="218" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <!-- Robot at (3,2) = (152,152) -->
+          <circle cx="152" cy="152" r="14" fill="#FFD700" stroke="#cc8800" stroke-width="2"/>
+          <text x="152" y="156" text-anchor="middle" font-size="10" fill="#333" font-weight="bold">R</text>
+        </svg>
+
+      </div>
+      <figcaption>An example of exploration problem</figcaption>
+    </div>
+  </div>
+</section>

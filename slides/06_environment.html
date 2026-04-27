@@ -1,0 +1,91 @@
+<section data-slide-id="environment">
+  <div class="slide-header">
+    <div class="slide-title">1 – Luminous Robots</div>
+    <div class="slide-subtitle">E) Environment</div>
+  </div>
+  <div class="slide-body">
+    <p style="font-size:0.72em; color:#555; margin-bottom:10px;">
+      Robots evolve on discrete graphs. Common topologies studied:
+    </p>
+    <div class="fig">
+      <!-- ── SVG: four topology diagrams side by side ───────── -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 215" width="100%"
+           aria-label="Four network topologies: path, ring, star and grid">
+
+        <!-- ── PATH ── -->
+        <text x="75" y="20" text-anchor="middle" font-size="14" fill="#006D82" font-weight="bold">Path</text>
+        <line x1="15" y1="95" x2="135" y2="95" stroke="#8C979A" stroke-width="2.5"/>
+        <circle cx="15"  cy="95" r="12" fill="#006D82"/><text x="15"  y="99" text-anchor="middle" font-size="9" fill="white">1</text>
+        <circle cx="55"  cy="95" r="12" fill="#006D82"/><text x="55"  y="99" text-anchor="middle" font-size="9" fill="white">2</text>
+        <circle cx="95"  cy="95" r="12" fill="#006D82"/><text x="95"  y="99" text-anchor="middle" font-size="9" fill="white">3</text>
+        <circle cx="135" cy="95" r="12" fill="#006D82"/><text x="135" y="99" text-anchor="middle" font-size="9" fill="white">4</text>
+
+        <!-- Separator -->
+        <line x1="157" y1="25" x2="157" y2="195" stroke="#ddd" stroke-width="1.5"/>
+
+        <!-- ── RING ── -->
+        <text x="238" y="20" text-anchor="middle" font-size="14" fill="#006D82" font-weight="bold">Ring</text>
+        <!-- Hexagonal ring: center (238,110), 6 vertices -->
+        <polygon points="238,55 283,83 283,138 238,166 193,138 193,83"
+                 fill="none" stroke="#8C979A" stroke-width="2.5"/>
+        <circle cx="238" cy="55"  r="11" fill="#006D82"/>
+        <circle cx="283" cy="83"  r="11" fill="#006D82"/>
+        <circle cx="283" cy="138" r="11" fill="#006D82"/>
+        <circle cx="238" cy="166" r="11" fill="#006D82"/>
+        <circle cx="193" cy="138" r="11" fill="#006D82"/>
+        <circle cx="193" cy="83"  r="11" fill="#006D82"/>
+
+        <!-- Separator -->
+        <line x1="313" y1="25" x2="313" y2="195" stroke="#ddd" stroke-width="1.5"/>
+
+        <!-- ── STAR ── -->
+        <text x="393" y="20" text-anchor="middle" font-size="14" fill="#006D82" font-weight="bold">Star</text>
+        <!-- Center (393,110) -->
+        <circle cx="393" cy="110" r="14" fill="#FFD700" stroke="#cc8800" stroke-width="1.5"/>
+        <!-- 5 leaves at angles -90°, -18°, 54°, 126°, 198° from center, radius 58 -->
+        <!-- -90°: (393, 52) -->
+        <circle cx="393" cy="52"  r="11" fill="#006D82"/>
+        <line x1="393" y1="96"  x2="393" y2="63"  stroke="#8C979A" stroke-width="2.5"/>
+        <!-- -18°: cos≈0.951, sin≈-0.309 → (448, 92) -->
+        <circle cx="448" cy="92"  r="11" fill="#006D82"/>
+        <line x1="407" y1="103" x2="438" y2="96"  stroke="#8C979A" stroke-width="2.5"/>
+        <!-- 54°: cos≈0.588, sin≈0.809 → (427, 157) -->
+        <circle cx="427" cy="157" r="11" fill="#006D82"/>
+        <line x1="405" y1="122" x2="418" y2="147" stroke="#8C979A" stroke-width="2.5"/>
+        <!-- 126°: cos≈-0.588, sin≈0.809 → (359, 157) -->
+        <circle cx="359" cy="157" r="11" fill="#006D82"/>
+        <line x1="381" y1="122" x2="368" y2="147" stroke="#8C979A" stroke-width="2.5"/>
+        <!-- 198°: cos≈-0.951, sin≈-0.309 → (338, 92) -->
+        <circle cx="338" cy="92"  r="11" fill="#006D82"/>
+        <line x1="379" y1="103" x2="349" y2="96"  stroke="#8C979A" stroke-width="2.5"/>
+
+        <!-- Separator -->
+        <line x1="473" y1="25" x2="473" y2="195" stroke="#ddd" stroke-width="1.5"/>
+
+        <!-- ── GRID (3×3) ── -->
+        <text x="547" y="20" text-anchor="middle" font-size="14" fill="#006D82" font-weight="bold">Grid</text>
+        <!-- Horizontal edges -->
+        <line x1="485" y1="60"  x2="609" y2="60"  stroke="#8C979A" stroke-width="2.5"/>
+        <line x1="485" y1="110" x2="609" y2="110" stroke="#8C979A" stroke-width="2.5"/>
+        <line x1="485" y1="160" x2="609" y2="160" stroke="#8C979A" stroke-width="2.5"/>
+        <!-- Vertical edges -->
+        <line x1="485" y1="60"  x2="485" y2="160" stroke="#8C979A" stroke-width="2.5"/>
+        <line x1="547" y1="60"  x2="547" y2="160" stroke="#8C979A" stroke-width="2.5"/>
+        <line x1="609" y1="60"  x2="609" y2="160" stroke="#8C979A" stroke-width="2.5"/>
+        <!-- Nodes -->
+        <circle cx="485" cy="60"  r="10" fill="#006D82"/>
+        <circle cx="547" cy="60"  r="10" fill="#006D82"/>
+        <circle cx="609" cy="60"  r="10" fill="#006D82"/>
+        <circle cx="485" cy="110" r="10" fill="#006D82"/>
+        <circle cx="547" cy="110" r="10" fill="#006D82"/>
+        <circle cx="609" cy="110" r="10" fill="#006D82"/>
+        <circle cx="485" cy="160" r="10" fill="#006D82"/>
+        <circle cx="547" cy="160" r="10" fill="#006D82"/>
+        <circle cx="609" cy="160" r="10" fill="#006D82"/>
+
+      </svg>
+      <!-- ───────────────────────────────────────────────────── -->
+      <figcaption>Some known topologies</figcaption>
+    </div>
+  </div>
+</section>

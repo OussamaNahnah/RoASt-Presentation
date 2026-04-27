@@ -1,0 +1,73 @@
+<section data-slide-id="obj-dynamic">
+  <div class="slide-header">
+    <div class="slide-title">4 – Objective</div>
+    <div class="slide-subtitle">C) Dynamic Environments</div>
+  </div>
+  <div class="slide-body">
+    <ul>
+      <li>Snow, traffic jam, temporal obstacle…</li>
+    </ul>
+    <div class="fig" style="margin-top:6px;">
+      <!-- ── SVG: two graph snapshots side by side ─────────── -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" width="100%"
+           aria-label="Dynamic network: topology changes over time">
+
+        <!-- ── Time t₁: full connectivity ── -->
+        <text x="130" y="20" text-anchor="middle" font-size="13" fill="#006D82" font-weight="bold">Time  t₁</text>
+        <!-- Nodes -->
+        <circle cx="80"  cy="60"  r="12" fill="#006D82"/>
+        <circle cx="180" cy="60"  r="12" fill="#006D82"/>
+        <circle cx="130" cy="140" r="12" fill="#006D82"/>
+        <circle cx="30"  cy="140" r="12" fill="#006D82"/>
+        <circle cx="230" cy="140" r="12" fill="#006D82"/>
+        <!-- All edges present -->
+        <line x1="80"  y1="60"  x2="180" y2="60"  stroke="#8C979A" stroke-width="2.5"/>
+        <line x1="80"  y1="60"  x2="130" y2="140" stroke="#8C979A" stroke-width="2.5"/>
+        <line x1="80"  y1="60"  x2="30"  y2="140" stroke="#8C979A" stroke-width="2.5"/>
+        <line x1="180" y1="60"  x2="130" y2="140" stroke="#8C979A" stroke-width="2.5"/>
+        <line x1="180" y1="60"  x2="230" y2="140" stroke="#8C979A" stroke-width="2.5"/>
+        <line x1="30"  y1="140" x2="130" y2="140" stroke="#8C979A" stroke-width="2.5"/>
+        <line x1="130" y1="140" x2="230" y2="140" stroke="#8C979A" stroke-width="2.5"/>
+        <!-- Robot markers -->
+        <circle cx="80"  cy="60"  r="6" fill="#FFD700"/>
+        <circle cx="130" cy="140" r="6" fill="#ff6633"/>
+
+        <!-- Arrow between states -->
+        <text x="260" y="108" text-anchor="middle" font-size="22" fill="#8C979A">→</text>
+        <text x="260" y="130" text-anchor="middle" font-size="10" fill="#8C979A" font-style="italic">time passes</text>
+
+        <!-- ── Time t₂: some edges disappear ── -->
+        <text x="390" y="20" text-anchor="middle" font-size="13" fill="#006D82" font-weight="bold">Time  t₂</text>
+        <!-- Nodes (same positions, offset +260) -->
+        <circle cx="340" cy="60"  r="12" fill="#006D82"/>
+        <circle cx="440" cy="60"  r="12" fill="#006D82"/>
+        <circle cx="390" cy="140" r="12" fill="#006D82"/>
+        <circle cx="290" cy="140" r="12" fill="#006D82"/>
+        <circle cx="490" cy="140" r="12" fill="#006D82"/>
+        <!-- Remaining edges (solid) -->
+        <line x1="340" y1="60"  x2="440" y2="60"  stroke="#8C979A" stroke-width="2.5"/>
+        <line x1="340" y1="60"  x2="290" y2="140" stroke="#8C979A" stroke-width="2.5"/>
+        <line x1="440" y1="60"  x2="490" y2="140" stroke="#8C979A" stroke-width="2.5"/>
+        <line x1="290" y1="140" x2="390" y2="140" stroke="#8C979A" stroke-width="2.5"/>
+        <!-- Disappeared edges (dashed red) -->
+        <line x1="340" y1="60"  x2="390" y2="140" stroke="#ff4444" stroke-width="2" stroke-dasharray="6,4" opacity="0.7"/>
+        <line x1="440" y1="60"  x2="390" y2="140" stroke="#ff4444" stroke-width="2" stroke-dasharray="6,4" opacity="0.7"/>
+        <line x1="390" y1="140" x2="490" y2="140" stroke="#ff4444" stroke-width="2" stroke-dasharray="6,4" opacity="0.7"/>
+        <!-- Robot markers -->
+        <circle cx="340" cy="60"  r="6" fill="#FFD700"/>
+        <circle cx="390" cy="140" r="6" fill="#ff6633"/>
+        <!-- Disconnected indicator -->
+        <text x="415" y="100" font-size="10" fill="#ff4444" font-style="italic">link down</text>
+
+        <!-- Legend -->
+        <line x1="20" y1="208" x2="50" y2="208" stroke="#8C979A" stroke-width="2.5"/>
+        <text x="56" y="212" font-size="10" fill="#555">Active link</text>
+        <line x1="140" y1="208" x2="170" y2="208" stroke="#ff4444" stroke-width="2" stroke-dasharray="6,4" opacity="0.7"/>
+        <text x="176" y="212" font-size="10" fill="#555">Disappeared link</text>
+
+      </svg>
+      <!-- ───────────────────────────────────────────────────── -->
+      <figcaption>Example of temporary changes in network topology over time</figcaption>
+    </div>
+  </div>
+</section>

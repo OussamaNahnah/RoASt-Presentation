@@ -1,0 +1,61 @@
+<section data-slide-id="obj-obstacles">
+  <div class="slide-header">
+    <div class="slide-title">4 – Objective</div>
+    <div class="slide-subtitle">B) Adding Obstacles</div>
+  </div>
+  <div class="slide-body">
+    <ul>
+      <li>Broken robot, animals…</li>
+    </ul>
+    <div class="fig" style="margin-top:10px;">
+      <!-- ── SVG: grid with obstacles ──────────────────────── -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226 226" width="310"
+           aria-label="Grid with some nodes blocked by obstacles">
+        <!-- Grid edges -->
+        <line x1="20"  y1="20"  x2="218" y2="20"  stroke="#ccc" stroke-width="2"/>
+        <line x1="20"  y1="86"  x2="218" y2="86"  stroke="#ccc" stroke-width="2"/>
+        <line x1="20"  y1="152" x2="218" y2="152" stroke="#ccc" stroke-width="2"/>
+        <line x1="20"  y1="218" x2="218" y2="218" stroke="#ccc" stroke-width="2"/>
+        <line x1="20"  y1="20"  x2="20"  y2="218" stroke="#ccc" stroke-width="2"/>
+        <line x1="86"  y1="20"  x2="86"  y2="218" stroke="#ccc" stroke-width="2"/>
+        <line x1="152" y1="20"  x2="152" y2="218" stroke="#ccc" stroke-width="2"/>
+        <line x1="218" y1="20"  x2="218" y2="218" stroke="#ccc" stroke-width="2"/>
+        <!-- Free nodes (teal) -->
+        <circle cx="20"  cy="20"  r="11" fill="#006D82" opacity="0.8"/>
+        <circle cx="86"  cy="20"  r="11" fill="#006D82" opacity="0.8"/>
+        <circle cx="218" cy="20"  r="11" fill="#006D82" opacity="0.8"/>
+        <circle cx="20"  cy="86"  r="11" fill="#006D82" opacity="0.8"/>
+        <circle cx="218" cy="86"  r="11" fill="#006D82" opacity="0.8"/>
+        <circle cx="86"  cy="152" r="11" fill="#006D82" opacity="0.8"/>
+        <circle cx="218" cy="152" r="11" fill="#006D82" opacity="0.8"/>
+        <circle cx="20"  cy="218" r="11" fill="#006D82" opacity="0.8"/>
+        <circle cx="86"  cy="218" r="11" fill="#006D82" opacity="0.8"/>
+        <circle cx="152" cy="218" r="11" fill="#006D82" opacity="0.8"/>
+        <circle cx="218" cy="218" r="11" fill="#006D82" opacity="0.8"/>
+        <!-- Robot on a free node -->
+        <circle cx="20" cy="20" r="11" fill="#FFD700" stroke="#cc8800" stroke-width="2"/>
+        <text x="20" y="24" text-anchor="middle" font-size="9" fill="#333" font-weight="bold">R</text>
+        <!-- Obstacle nodes (red with X) -->
+        <!-- Obstacle at (1,1)=(86,86) -->
+        <rect x="74" y="74" width="24" height="24" rx="4" fill="#ff4444" opacity="0.85"/>
+        <line x1="78" y1="78" x2="98" y2="98" stroke="white" stroke-width="3" stroke-linecap="round"/>
+        <line x1="98" y1="78" x2="78" y2="98" stroke="white" stroke-width="3" stroke-linecap="round"/>
+        <!-- Obstacle at (2,2)=(152,152) -->
+        <rect x="140" y="140" width="24" height="24" rx="4" fill="#ff4444" opacity="0.85"/>
+        <line x1="144" y1="144" x2="164" y2="164" stroke="white" stroke-width="3" stroke-linecap="round"/>
+        <line x1="164" y1="144" x2="144" y2="164" stroke="white" stroke-width="3" stroke-linecap="round"/>
+        <!-- Obstacle at (2,0)=(152,20) — broken robot -->
+        <rect x="140" y="8" width="24" height="24" rx="4" fill="#ff4444" opacity="0.85"/>
+        <line x1="144" y1="12" x2="164" y2="32" stroke="white" stroke-width="3" stroke-linecap="round"/>
+        <line x1="164" y1="12" x2="144" y2="32" stroke="white" stroke-width="3" stroke-linecap="round"/>
+        <!-- Legend -->
+        <rect x="10"  y="230" width="14" height="14" rx="3" fill="#ff4444" opacity="0.85"/>
+        <text x="30"  y="241" font-size="10" fill="#555">Obstacle (blocked node)</text>
+        <circle cx="16" cy="254" r="7" fill="#FFD700"/>
+        <text x="30"  y="258" font-size="10" fill="#555">Robot</text>
+      </svg>
+      <!-- ───────────────────────────────────────────────────── -->
+      <figcaption>Example of adding obstacles</figcaption>
+    </div>
+  </div>
+</section>

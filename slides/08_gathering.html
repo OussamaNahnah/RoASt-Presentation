@@ -1,0 +1,92 @@
+<section data-slide-id="gathering">
+  <div class="slide-header">
+    <div class="slide-title">2 – Problems</div>
+    <div class="slide-subtitle">B) Gathering</div>
+  </div>
+  <div class="slide-body">
+    <p>
+      <strong>Definition:</strong> bringing all robots to a single location;
+      the choice of the point is not predetermined.
+    </p>
+    <div class="fig" style="margin-top:10px;">
+      <div class="r-stack">
+
+        <!-- ── State 1: robots scattered ─────────────────────── -->
+        <svg class="fragment fade-out" data-fragment-index="0"
+             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226 226" width="310"
+             aria-label="Gathering step 1 – robots scattered on the grid">
+          <!-- Grid edges -->
+          <line x1="20"  y1="20"  x2="218" y2="20"  stroke="#ccc" stroke-width="2"/>
+          <line x1="20"  y1="86"  x2="218" y2="86"  stroke="#ccc" stroke-width="2"/>
+          <line x1="20"  y1="152" x2="218" y2="152" stroke="#ccc" stroke-width="2"/>
+          <line x1="20"  y1="218" x2="218" y2="218" stroke="#ccc" stroke-width="2"/>
+          <line x1="20"  y1="20"  x2="20"  y2="218" stroke="#ccc" stroke-width="2"/>
+          <line x1="86"  y1="20"  x2="86"  y2="218" stroke="#ccc" stroke-width="2"/>
+          <line x1="152" y1="20"  x2="152" y2="218" stroke="#ccc" stroke-width="2"/>
+          <line x1="218" y1="20"  x2="218" y2="218" stroke="#ccc" stroke-width="2"/>
+          <!-- Empty nodes -->
+          <circle cx="86"  cy="86"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="152" cy="86"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="86"  cy="152" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="218" cy="86"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="20"  cy="86"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="20"  cy="152" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="86"  cy="20"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="152" cy="152" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="218" cy="152" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="86"  cy="218" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="152" cy="218" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <!-- Robots scattered (orange) -->
+          <circle cx="20"  cy="20"  r="14" fill="#ff6633" stroke="#cc3300" stroke-width="2"/>
+          <text x="20"  y="24"  text-anchor="middle" font-size="9" fill="white" font-weight="bold">R1</text>
+          <circle cx="218" cy="20"  r="14" fill="#ff6633" stroke="#cc3300" stroke-width="2"/>
+          <text x="218" y="24"  text-anchor="middle" font-size="9" fill="white" font-weight="bold">R2</text>
+          <circle cx="20"  cy="218" r="14" fill="#ff6633" stroke="#cc3300" stroke-width="2"/>
+          <text x="20"  y="222" text-anchor="middle" font-size="9" fill="white" font-weight="bold">R3</text>
+          <circle cx="218" cy="218" r="14" fill="#ff6633" stroke="#cc3300" stroke-width="2"/>
+          <text x="218" y="222" text-anchor="middle" font-size="9" fill="white" font-weight="bold">R4</text>
+          <circle cx="152" cy="20"  r="14" fill="#ff6633" stroke="#cc3300" stroke-width="2"/>
+          <text x="152" y="24"  text-anchor="middle" font-size="9" fill="white" font-weight="bold">R5</text>
+        </svg>
+
+        <!-- ── State 2: all robots gathered at center ─────────── -->
+        <svg class="fragment" data-fragment-index="0"
+             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226 226" width="310"
+             aria-label="Gathering step 2 – all robots at one node">
+          <!-- Grid edges -->
+          <line x1="20"  y1="20"  x2="218" y2="20"  stroke="#ccc" stroke-width="2"/>
+          <line x1="20"  y1="86"  x2="218" y2="86"  stroke="#ccc" stroke-width="2"/>
+          <line x1="20"  y1="152" x2="218" y2="152" stroke="#ccc" stroke-width="2"/>
+          <line x1="20"  y1="218" x2="218" y2="218" stroke="#ccc" stroke-width="2"/>
+          <line x1="20"  y1="20"  x2="20"  y2="218" stroke="#ccc" stroke-width="2"/>
+          <line x1="86"  y1="20"  x2="86"  y2="218" stroke="#ccc" stroke-width="2"/>
+          <line x1="152" y1="20"  x2="152" y2="218" stroke="#ccc" stroke-width="2"/>
+          <line x1="218" y1="20"  x2="218" y2="218" stroke="#ccc" stroke-width="2"/>
+          <!-- All nodes empty -->
+          <circle cx="20"  cy="20"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="86"  cy="20"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="152" cy="20"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="218" cy="20"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="20"  cy="86"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="152" cy="86"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="218" cy="86"  r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="20"  cy="152" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="86"  cy="152" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="152" cy="152" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="218" cy="152" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="20"  cy="218" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="86"  cy="218" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="152" cy="218" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <circle cx="218" cy="218" r="11" fill="#e0e0e0" stroke="#bbb" stroke-width="1.5"/>
+          <!-- All robots gathered at (1,1) = (86,86) — stacked rings -->
+          <circle cx="86" cy="86" r="22" fill="#ff6633" stroke="#cc3300" stroke-width="2.5"/>
+          <circle cx="86" cy="86" r="14" fill="#FFD700" stroke="#cc8800" stroke-width="2"/>
+          <text x="86" y="82" text-anchor="middle" font-size="8" fill="#333" font-weight="bold">R1..R5</text>
+          <text x="86" y="93" text-anchor="middle" font-size="8" fill="#333">gathered</text>
+        </svg>
+
+      </div>
+      <figcaption>An example of gathering problem</figcaption>
+    </div>
+  </div>
+</section>

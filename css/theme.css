@@ -1,0 +1,424 @@
+/* ================================================================
+   theme.css - Luminous Robots Presentation (clean UI)
+   ================================================================ */
+
+:root {
+  --clr-a: #006d82;
+  --clr-b: #8c979a;
+  --clr-bg: #f7fafc;
+  --clr-panel: #ffffff;
+  --clr-ink: #1b2a31;
+  --clr-muted: #5a6f79;
+  --clr-link: #0b5f9f;
+  --font-main: "Inter", "Segoe UI", sans-serif;
+  --font-title: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-subtitle: "Outfit", "Segoe UI", sans-serif;
+  --slide-ph: 34px;
+  --slide-pv: 20px;
+}
+
+.reveal {
+  font-family: var(--font-main);
+  color: var(--clr-ink);
+  background: var(--clr-bg);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--clr-panel);
+  border: 1px solid rgba(0, 109, 130, 0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  display: flex !important;
+  flex-direction: column;
+}
+
+.slide-header {
+  background: var(--clr-a);
+  padding: 10px var(--slide-ph) 8px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.slide-title {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-title);
+  text-transform: none;
+  letter-spacing: 0.01em;
+  font-size: 0.66em;
+  font-weight: 700;
+}
+
+.slide-subtitle {
+  margin: 3px 0 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--font-subtitle);
+  font-size: 0.57em;
+}
+
+.slide-body {
+  padding: var(--slide-pv) var(--slide-ph);
+  flex: 1 1 0;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.title-slide {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid rgba(0, 109, 130, 0.15);
+  border-radius: 8px;
+  padding: 28px var(--slide-ph) !important;
+}
+
+.logos-row {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.logo-box {
+  width: 230px;
+  height: 108px;
+  border: 1px solid rgba(0, 109, 130, 0.3);
+  border-radius: 8px;
+  background: #f9fcfd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+}
+
+.logo-box img {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-edspi img {
+  height: 124%;
+}
+
+.logo-limos img {
+  height: 132%;
+}
+
+.logo-uca img {
+  height: 124%;
+}
+
+.presentation-title {
+  font-family: var(--font-subtitle);
+  font-size: 0.86em !important;
+  color: #095f72 !important;
+  text-transform: none !important;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  margin: 10px 0 14px !important;
+  line-height: 1.22 !important;
+  max-width: 52ch;
+}
+
+.author-name {
+  margin: 8px 0 2px;
+  font-family: var(--font-title);
+  font-size: 0.68em;
+  font-weight: 700;
+  color: var(--clr-ink);
+}
+
+.pres-date,
+.pres-institute {
+  margin: 3px 0;
+  color: var(--clr-muted);
+  font-size: 0.52em;
+}
+
+.supervisors-section {
+  margin-top: 10px;
+  color: var(--clr-muted);
+  font-size: 0.5em;
+}
+
+.supervisors-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 4px;
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--clr-a);
+}
+
+.reveal h2,
+.reveal h3 {
+  color: var(--clr-a);
+  font-family: var(--font-subtitle);
+  letter-spacing: 0.01em;
+}
+
+.reveal p {
+  font-size: 0.64em;
+  line-height: 1.55;
+}
+
+.reveal ul {
+  margin: 0 0 0 1.22em;
+}
+
+.reveal ul li {
+  font-size: 0.63em;
+  line-height: 1.58;
+  margin-bottom: 6px;
+}
+
+.reveal ul li::marker {
+  color: var(--clr-a);
+}
+
+.reveal ul ul li {
+  font-size: 0.92em;
+  list-style-type: circle;
+}
+
+.reveal strong {
+  color: #095f72;
+}
+
+.reveal a {
+  color: var(--clr-link);
+  text-underline-offset: 3px;
+}
+
+.reveal a:hover {
+  color: #0a4f84;
+}
+
+.reveal a:focus-visible,
+.reveal button:focus-visible {
+  outline: 2px solid #c4a243;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.two-col {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+}
+
+.two-col > * {
+  flex: 1;
+}
+
+.three-col {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.three-col > .col-item {
+  flex: 1;
+  text-align: center;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fig {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.fig figcaption,
+.caption {
+  font-size: 0.48em;
+  color: #5c7079;
+  text-align: center;
+  font-style: italic;
+}
+
+.phase-label {
+  font-family: var(--font-title);
+  font-size: 0.56em;
+  font-weight: 700;
+  color: var(--clr-a);
+  margin-top: 5px;
+}
+
+.reveal svg {
+  max-width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.reveal .progress {
+  background: rgba(140, 151, 154, 0.35);
+  height: 4px;
+}
+
+.reveal .progress span {
+  background: var(--clr-a);
+}
+
+.reveal .slide-number {
+  background: transparent;
+  color: rgba(90, 111, 121, 0.88);
+  font-family: var(--font-subtitle);
+  font-size: 0.5em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0;
+  border-radius: 0;
+  right: auto;
+  bottom: auto;
+  z-index: 35;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.reveal .controls {
+  display: none !important;
+}
+
+.reveal .controls button {
+  color: var(--clr-a);
+  opacity: 0.38;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 109, 130, 0.18);
+  transition: opacity 0.2s ease, color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.reveal .controls button.enabled {
+  opacity: 1;
+}
+
+.reveal .controls button:hover,
+.reveal .controls button:focus-visible {
+  color: #0a4f84;
+  background: #ffffff;
+  border-color: rgba(10, 79, 132, 0.3);
+}
+
+.reveal .fragment {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.reveal .present .slide-header,
+.reveal .present .slide-body {
+  animation: fade-in 0.35s ease both;
+}
+
+.reveal .present .slide-body {
+  animation-delay: 0.04s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 960px) {
+  :root {
+    --slide-ph: 20px;
+    --slide-pv: 14px;
+  }
+
+  .presentation-title {
+    font-size: 0.7em !important;
+    max-width: 30ch;
+  }
+
+  .logo-box {
+    width: 180px;
+    height: 84px;
+  }
+
+  .supervisors-row {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .reveal ul li {
+    font-size: 0.6em;
+  }
+
+  .reveal p {
+    font-size: 0.6em;
+  }
+}
+
+@media (max-width: 700px) {
+  .logos-row {
+    gap: 12px;
+  }
+
+  .logo-box {
+    width: 150px;
+    height: 70px;
+  }
+
+  .two-col,
+  .three-col {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .three-col > .col-item {
+    width: 100%;
+  }
+
+  .title-slide {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .presentation-title {
+    font-size: 0.62em !important;
+  }
+
+  .reveal .slide-number {
+    font-size: 0.44em;
+    padding: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal *,
+  .reveal .fragment,
+  .reveal .present .slide-header,
+  .reveal .present .slide-body {
+    animation: none !important;
+    transition: none !important;
+  }
+}

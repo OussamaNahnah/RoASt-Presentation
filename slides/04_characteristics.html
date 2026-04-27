@@ -1,0 +1,67 @@
+<section data-slide-id="characteristics">
+  <div class="slide-header">
+    <div class="slide-title">1 – Luminous Robots</div>
+    <div class="slide-subtitle">C) Characteristics</div>
+  </div>
+  <div class="slide-body">
+    <div class="two-col" style="margin-top:12px; align-items:center;">
+
+      <!-- Left: visibility range diagram -->
+      <div class="fig">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="260"
+             aria-label="Visibility range: robot sees neighbors within radius r">
+          <!-- Range circle -->
+          <circle cx="100" cy="100" r="74" fill="none" stroke="#8C979A" stroke-width="1.5" stroke-dasharray="7,4"/>
+          <!-- Range label -->
+          <text x="165" y="40" font-size="11" fill="#8C979A" font-style="italic">range r</text>
+          <line x1="100" y1="100" x2="160" y2="42" stroke="#8C979A" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+          <!-- Central robot body (simplified) -->
+          <rect x="83" y="80" width="34" height="42" rx="6" fill="#006D82"/>
+          <rect x="88" y="66" width="24" height="20" rx="5" fill="#006D82"/>
+          <circle cx="95" cy="76" r="5" fill="#00ff88"/>
+          <circle cx="105" cy="76" r="5" fill="#ff3366"/>
+          <!-- Neighbors in range (yellow) -->
+          <circle cx="48"  cy="58"  r="11" fill="#FFD700"/><text x="48"  y="62"  text-anchor="middle" font-size="9" fill="#333" font-weight="bold">R</text>
+          <circle cx="158" cy="68"  r="11" fill="#FFD700"/><text x="158" y="72"  text-anchor="middle" font-size="9" fill="#333" font-weight="bold">R</text>
+          <circle cx="58"  cy="148" r="11" fill="#FFD700"/><text x="58"  y="152" text-anchor="middle" font-size="9" fill="#333" font-weight="bold">R</text>
+          <!-- Connection lines to neighbors -->
+          <line x1="98"  y1="99"  x2="55"  y2="64"  stroke="#006D82" stroke-width="1" stroke-dasharray="3,3" opacity="0.65"/>
+          <line x1="102" y1="99"  x2="149" y2="72"  stroke="#006D82" stroke-width="1" stroke-dasharray="3,3" opacity="0.65"/>
+          <line x1="95"  y1="120" x2="66"  y2="143" stroke="#006D82" stroke-width="1" stroke-dasharray="3,3" opacity="0.65"/>
+          <!-- Out-of-range robot (gray) -->
+          <circle cx="188" cy="30" r="11" fill="#ccc"/><text x="188" y="34" text-anchor="middle" font-size="9" fill="#888">R</text>
+          <text x="188" y="20" text-anchor="middle" font-size="9" fill="#aaa" font-style="italic">out of range</text>
+        </svg>
+        <figcaption>Visibility range</figcaption>
+      </div>
+
+      <!-- Right: color table -->
+      <div class="fig">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 200" width="270"
+             aria-label="Light color states table">
+          <text x="110" y="18" text-anchor="middle" font-size="13" fill="#006D82" font-weight="bold">Light Colors (κ colors)</text>
+          <!-- Row 0 -->
+          <rect x="18" y="27" width="184" height="30" rx="4" fill="#f0f8ff" stroke="#d0e8f0" stroke-width="1"/>
+          <circle cx="42" cy="42" r="10" fill="#ff3366"/>
+          <text x="62" y="46" font-size="11" fill="#333">Color 0 — "red" state</text>
+          <!-- Row 1 -->
+          <rect x="18" y="63" width="184" height="30" rx="4" fill="#f0f8ff" stroke="#d0e8f0" stroke-width="1"/>
+          <circle cx="42" cy="78" r="10" fill="#00cc66"/>
+          <text x="62" y="82" font-size="11" fill="#333">Color 1 — "green" state</text>
+          <!-- Row 2 -->
+          <rect x="18" y="99" width="184" height="30" rx="4" fill="#f0f8ff" stroke="#d0e8f0" stroke-width="1"/>
+          <circle cx="42" cy="114" r="10" fill="#FFD700"/>
+          <text x="62" y="118" font-size="11" fill="#333">Color 2 — "yellow" state</text>
+          <!-- Row 3 -->
+          <rect x="18" y="135" width="184" height="30" rx="4" fill="#f0f8ff" stroke="#d0e8f0" stroke-width="1"/>
+          <circle cx="42" cy="150" r="10" fill="#00ccff"/>
+          <text x="62" y="154" font-size="11" fill="#333">Color 3 — "blue" state</text>
+          <!-- More indicator -->
+          <text x="110" y="190" text-anchor="middle" font-size="16" fill="#8C979A">⋯  κ colors total</text>
+        </svg>
+        <figcaption>Light color configuration</figcaption>
+      </div>
+
+    </div>
+  </div>
+</section>
